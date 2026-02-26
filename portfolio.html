@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Revadevi | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+      <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #faf7ff;
+            padding-top: 70px;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #8e44ad, #c39bd3);
+        }
+
+        .navbar a {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ddb8ef, #f5eef8, #f0c4f8);
+            color: #4a235a;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+         .btn-custom {
+            background: #8e44ad;
+            color: white;
+            font-weight: 600;
+            border-radius: 30px;
+            padding: 10px 25px;
+            transition: 0.3s;
+        }
+
+       .btn-custom:hover {
+            background: #bb8fce;
+            color: white;
+        }
+
+         section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #6c3483;
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 720px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #5b2c6f;
+        }
+          section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #6c3483;
+        }
+
+        .custom-card {
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(142, 68, 173, 0.1);
+            transition: 0.4s;
+            padding: 25px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(142, 68, 173, 0.25);
+        }
+
+        .custom-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            transition: 0.4s;
+        }
+
+        .custom-card:hover img {
+            transform: scale(1.05);
+        }
+        .skills{
+         background: linear-gradient(to right, #c084fc, #f472b6);
+         background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
+
+        }
+
+        .skill-box {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(142, 68, 173, 0.1);
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(142, 68, 173, 0.2);
+        }
+
+        .skill-box i {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+         .custom-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 15px;
+            width: 100%;
+            transition: 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+         .custom-card:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .custom-card h5{
+            color: #4a235a;
+        }
+
+        .service-icon {
+            font-size: 45px;   
+            color: #4a235a;;    
+            margin-bottom: 20px;
+          }
+
+        .contact-section {
+            background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
+            padding: 80px 0;
+          }
+
+        .contact-card {
+           background: white;
+           padding: 40px;
+           border-radius: 20px;
+           box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+           transition: 0.3s ease;
+          }
+
+       .contact-card:hover {
+           transform: translateY(-6px);
+          }
+
+       .contact-section .form-control {
+           border-radius: 10px;
+           border: 1px solid #ddd;
+          } 
+
+       .contact-section .form-control:focus {
+           border-color: #c084fc;
+           box-shadow: 0 0 5px rgba(192, 132, 252, 0.4);
+          }
+
+       .input-group-text {
+           background: #f8f0ff;
+           border-radius: 10px 0 0 10px;
+          }
+
+       .btn-custom{
+          background: linear-gradient(to right, #c084fc, #f472b6);
+           color: rgb(17, 15, 15);
+           border-radius: 10px;
+           font-weight: 600;
+           transition: 0.3s ease;
+         }
+
+       .btn-custom:hover {
+            opacity: 0.9;
+         }
+        
+        footer {
+            background: #8e44ad;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffd1ff;
+            transform: scale(1.2);
+        }
+
+    </style>
+    </head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="#">Reva Devi</a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="container">
+        <h1 data-aos="fade-up">Hello, I'm Reva Devi</h1>
+        <h4 class="mt-3" data-aos="fade-up" data-aos-delay="200">Python Full Stack Developer</h4>
+        <p class="mt-3" data-aos="fade-up" data-aos-delay="400">
+            Building dynamic and responsive web applications with clean and scalable solutions.
+        </p>
+        <a href="#contact" class="btn btn-custom mt-4" data-aos="zoom-in" data-aos-delay="600">Hire Me</a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+            I am a passionate Python Full Stack Developer skilled in HTML, CSS, Bootstrap, JavaScript and Python.
+            I enjoy creating responsive, user-friendly applications and continuously improving my technical expertise.
+        </p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="row g-4 text-center">
+
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-html5-plain colored"></i><p>HTML</p></div></div>
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-css3-plain colored"></i><p>CSS</p></div></div>
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-bootstrap-plain colored"></i><p>Bootstrap</p></div></div>
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div></div>
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-python-plain colored"></i><p>Python</p></div></div>
+            <!-- <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-django-plain colored"></i><p>Django</p></div></div> -->
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-mysql-plain colored"></i><p>SQL</p></div></div>
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-git-plain colored"></i><p>Git</p></div></div>
+            <div class="col-md-3 col-6"><div class="skill-box"><i class="devicon-github-original"></i><p>GitHub</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+    <div class="container">
+        <h2 class="section-title">My Services</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4 d-flex">
+                <div class="custom-card text-center">
+                    <div>
+                        <i class="fas fa-laptop-code service-icon"></i>
+                        <h5><b>Frontend Development</b></h5>
+                        <p>Designing attractive and interactive user interfaces using HTML, CSS, Bootstrap and JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex">
+                <div class="custom-card text-center">
+                    <div>
+                        <i class="fas fa-globe service-icon"></i>
+                        <h5><b>Web Development</b></h5>
+                        <p>Developing full-stack web applications using Python and modern web technologies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex">
+                <div class="custom-card text-center">
+                    <div>
+                        <i class="fas fa-mobile-alt service-icon"></i>
+                        <h5><b>Responsive Design</b></h5>
+                        <p>Creating mobile-friendly and fully responsive websites that work on all devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="bg-light">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="row g-4">
+
+            <div class="col-md-6 d-flex">
+                <div class="custom-card text-center">
+                    <img src="/assests/images/terraloom.jpg" alt="Terraloom">
+                    <h5>Terraloom E-Commerce</h5>
+                    <p>Fully responsive e-commerce website built with modern frontend technologies.</p>
+                    <a href=" https://revadevi60.github.io/Terrloomyash-Paperbag-Website/" target="_blank" class="btn btn-custom">View Work</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="custom-card text-center">
+                    <img src="/assests/images/marutiwoods.jpg" alt="Maruti Woods">
+                    <h5>Maruti Woods</h5>
+                    <p>Responsive website using HTML, CSS, Bootstrap & JavaScript.</p>
+                    <a href=" https://revadevi60.github.io/MarutiWoods-E-Commerce-Website/" target="_blank" class="btn btn-custom">View Work</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title text-center">Contact Me</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="contact-card">
+
+                    <form id="contactForm">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-comment"></i>
+                            </span>
+                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                    
+                        <button type="submit" class="btn btn-custom w-100">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Reva Devi | Python Full Stack Developer</p>
+    <div>
+        <a href="mailto:revadevi9688@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/revadevi60" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/revadevi-g/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var name = document.querySelector('input[placeholder="Your Name"]').value;
+    var email = document.querySelector('input[placeholder="Your Email"]').value;
+    var message = document.querySelector('textarea').value;
+
+    var phoneNumber = "916379968660"; // Your WhatsApp number (NO +, NO spaces)
+
+    var whatsappMessage =
+        "Hello Reva,%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Email: " + email + "%0A" +
+        "Message: " + message;
+
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1000, once:true});</script>
+
+</body>
+</html>
